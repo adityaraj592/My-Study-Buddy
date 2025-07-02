@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Study Buddy</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>My Study Buddy</h1>
+        <button id="theme-toggle">Switch Theme</button>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <p id="greeting"></p>
+            <p id="today-summary"></p>
+            <p id="next-exam"></p>
+            <p id="daily-streak"></p>
+            <blockquote id="motivational-quote"></blockquote>
+        </section>
+
+        <!-- Study Progress Tracker -->
+        <section id="study-tracker">
+            <h2>Study Progress</h2>
+            <form id="study-form">
+                <label>
+                    Subject:
+                    <input type="text" id="subject" required>
+                </label>
+                <label>
+                    Duration (minutes):
+                    <input type="number" id="duration" required>
+                </label>
+                <label>
+                    Notes:
+                    <textarea id="notes"></textarea>
+                </label>
+                <button type="submit">Add Session</button>
+            </form>
+            <ul id="study-list"></ul>
+        </section>
+
+        <!-- Exam Countdown -->
+        <section id="exam-countdown">
+            <h2>Exam Countdown</h2>
+            <form id="exam-form">
+                <label>
+                    Exam Name:
+                    <input type="text" id="exam-name" required>
+                </label>
+                <label>
+                    Exam Date:
+                    <input type="date" id="exam-date" required>
+                </label>
+                <button type="submit">Add Exam</button>
+            </form>
+            <ul id="exam-list"></ul>
+        </section>
+
+        <!-- Study Planner (Time Table) -->
+        <section id="study-planner">
+            <h2>Study Planner</h2>
+            <form id="planner-form">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Subject</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Generate rows for each day -->
+                        <tr>
+                            <td>Monday</td>
+                            <td><input type="text" id="monday-subject"></td>
+                            <td><input type="text" id="monday-time"></td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td><input type="text" id="tuesday-subject"></td>
+                            <td><input type="text" id="tuesday-time"></td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td><input type="text" id="wednesday-subject"></td>
+                            <td><input type="text" id="wednesday-time"></td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td><input type="text" id="thursday-subject"></td>
+                            <td><input type="text" id="thursday-time"></td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td><input type="text" id="friday-subject"></td>
+                            <td><input type="text" id="friday-time"></td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td><input type="text" id="saturday-subject"></td>
+                            <td><input type="text" id="saturday-time"></td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td><input type="text" id="sunday-subject"></td>
+                            <td><input type="text" id="sunday-time"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="submit">Save Planner</button>
+            </form>
+            <div id="planner-display"></div>
+        </section>
+
+        <!-- To-Do List -->
+        <section id="todo-list">
+            <h2>To-Do List</h2>
+            <form id="todo-form">
+                <label>
+                    Task:
+                    <input type="text" id="todo-task" required>
+                </label>
+                <button type="submit">Add Task</button>
+            </form>
+            <ul id="todo-items"></ul>
+        </section>
+
+        <!-- Friends List -->
+        <section id="friends">
+            <h2>Friends Progress</h2>
+            <form id="friend-form">
+                <label>
+                    Friend Name:
+                    <input type="text" id="friend-name" required>
+                </label>
+                <label>
+                    Progress (%):
+                    <input type="number" id="friend-progress" min="0" max="100" required>
+                </label>
+                <button type="submit">Add Friend</button>
+            </form>
+            <ul id="friend-list"></ul>
+        </section>
+        <!-- Pomodoro Timer -->
+<section id="pomodoro-timer">
+    <h2>Pomodoro Timer</h2>
+    <div id="timer-display">25:00</div>
+    <button id="start-timer">Start</button>
+    <button id="pause-timer">Pause</button>
+    <button id="reset-timer">Reset</button>
+    <p id="timer-status">Ready to focus!</p>
+</section>
+
+<!-- Notes Section -->
+<section id="notes-section">
+    <h2>Notes</h2>
+    <form id="note-form">
+        <label>
+            Title:
+            <input type="text" id="note-title" required>
+        </label>
+        <label>
+            Content:
+            <textarea id="note-content" required></textarea>
+        </label>
+        <button type="submit">Add Note</button>
+    </form>
+    <ul id="notes-list"></ul>
+</section>
+
+<!-- GPA Calculator -->
+<section id="gpa-calculator">
+    <h2>GPA Calculator</h2>
+    <form id="gpa-form">
+        <label>
+            Subject Name:
+            <input type="text" id="gpa-subject" required>
+        </label>
+        <label>
+            Marks Obtained:
+            <input type="number" id="gpa-marks" required>
+        </label>
+        <button type="submit">Add Marks</button>
+    </form>
+    <ul id="gpa-list"></ul>
+    <p id="gpa-result">Average: N/A</p>
+</section>
+
+<!-- Sticky Notes -->
+<section id="sticky-notes">
+    <h2>Sticky Notes</h2>
+    <form id="sticky-form">
+        <label>
+            Note Content:
+            <input type="text" id="sticky-content" required>
+        </label>
+        <button type="submit">Add Sticky Note</button>
+    </form>
+    <div id="sticky-container"></div>
+</section>
+<footer>
+    <p>&copy; 2025 Aditya Raj</p>
+    <p>Made with ❤️</p>
+</footer>
+    </main>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

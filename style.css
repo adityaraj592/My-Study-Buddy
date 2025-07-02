@@ -1,0 +1,229 @@
+/* ---------------------------------------------
+   Global Styles
+--------------------------------------------- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+/* Dark Theme Class (added via JavaScript) */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Links (optional) */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Headers */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background-color: #ffffff;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+body.dark-theme header {
+    background-color: #1f1f1f;
+}
+
+body.dark-theme #theme-toggle {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* ---------------------------------------------
+   Main Content Layout
+--------------------------------------------- */
+/* Main Content Layout as Grid */
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Each Section in the Grid */
+section {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Full width for sections that must span across (like Dashboard) */
+#dashboard {
+    grid-column: 1 / 4; /* Span all 3 columns */
+}
+
+/* Responsive behavior for small screens */
+@media screen and (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr; /* Single column layout on narrow screens */
+    }
+
+    #dashboard {
+        grid-column: auto;
+    }
+}
+
+
+/* Section Headings */
+section h2 {
+    margin-top: 0;
+    color: #4CAF50;
+}
+
+/* Dark Theme Section Backgrounds */
+body.dark-theme section {
+    background-color: #1e1e1e;
+    border-color: #333333;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Inputs and Textareas */
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form textarea {
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+/* Dark Theme Inputs */
+body.dark-theme form input,
+body.dark-theme form textarea {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #555555;
+}
+
+/* Buttons */
+form button,
+#start-timer,
+#pause-timer,
+#reset-timer {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover,
+#start-timer:hover,
+#pause-timer:hover,
+#reset-timer:hover {
+    background-color: #45a049;
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #eeeeee;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+body.dark-theme ul li {
+    background-color: #333333;
+}
+
+/* Sticky Notes Container */
+#sticky-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#sticky-container div {
+    background-color: #fffb8f;
+    color: #333333;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    word-wrap: break-word;
+}
+
+/* Timer Display */
+#timer-display {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* GPA Result */
+#gpa-result {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Planner Table */
+#study-planner table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#study-planner th,
+#study-planner td {
+    border: 1px solid #cccccc;
+    padding: 8px;
+    text-align: left;
+}
+
+body.dark-theme #study-planner th,
+body.dark-theme #study-planner td {
+    border-color: #555555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    section {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
